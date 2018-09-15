@@ -1,12 +1,19 @@
-loanAmount = input('Enter loan amount: \n')
-loanAmount = float(loanAmount)
 
-years = input('How many years will you have the loan? \n')
-years = float(years) * 12
+## input and calculations ##
+loanAmount = float(input('Enter loan amount: \n'))
+years = float(input('How many years will you have the loan? \n')) * 12   # *12 calculates number of payments
+interestRate = float(input('Enter Interest Rate: \n')) / 100 / 120
+monthlyPayment = loanAmount * (interestRate * (1 + interestRate) ** years) / ((1 + interestRate) ** years -1)
+monthlyInterest = round((loanAmount * interestRate/100/12),2)
+monthlyBalance = float(loanAmount - (monthlyPayment - monthlyInterest))
 
-interestRate = input('Enter Interest Rate: \n')
-interestRate = float(interestRate) / 100 / 12
+# print("The monthy payment is\n (%.2f) " % monthlyPayment)
 
-mortgagePayment = loanAmount * (interestRate * (1 + interestRate) ** years) / ((1 + interestRate) ** years -1)
 
-print("The monthy mortgage payment is\n (%.2f) " % mortgagePayment)
+month = 0
+while monthlyBalance > 0:
+    month += 1
+
+
+print ("Month", "\t\t", "Payment", "\t\t", "Interest", "\t\t\t", "Balance")
+print ("-----", "\t\t", "-------", "\t\t", "--------", "\t\t\t", "-------")
