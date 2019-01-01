@@ -1,6 +1,6 @@
 from tkinter import *
 
-root = Tk()                 # the main window
+root = Tk()                  
 
 #topFrame = Frame(root)
 #topFrame.pack()             # if you want anything to display, you have to place it
