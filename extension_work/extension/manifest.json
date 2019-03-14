@@ -1,6 +1,6 @@
 {
     "name":"Hello world extension",
-    "version":"1.0",
+    "version":"2.0",
     "description":"my hello world extension",
     "author":"George Newman",
     "manifest_version":2,
