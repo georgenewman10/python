@@ -72,7 +72,7 @@ def main():
     s.quit()
 
 if __name__ == '__main__':
-    schedule.every().day.at("04:20").do(main())
+    schedule.every().day.at("06:00").do(main)
 
     while True:
         schedule.run_pending()
